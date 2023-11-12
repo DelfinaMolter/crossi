@@ -1,0 +1,34 @@
+:root {
+  --primary-button:#A6643D;
+  --secondary-button:#6C7246;
+  --third-button:#512200;
+  /* --primary-button-hover:;
+  --secondary-button-hover:;
+  --third-button-hover:; */
+  --primary-color:#A6643D;
+  --secondary-color:#6C7246;
+  --third-button:#D4A373;
+
+  --footer:#7F3C1B;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
