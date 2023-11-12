@@ -7,9 +7,10 @@
   --third-button-hover:; */
   --primary-color:#A6643D;
   --secondary-color:#6C7246;
-  --third-button:#D4A373;
+  --third-color:#D4A373;
 
   --footer:#7F3C1B;
+
 }
 
 
@@ -24,6 +25,10 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  min-height: 100vh;
+}
+body {
+  background-image: url('/fondo-02.png');
 }
 
 
