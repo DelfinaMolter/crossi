@@ -1,4 +1,4 @@
-import ButtonComponent from "@/app/components/butoon/button";
+import ButtonComponent from "@/app/components/button/button";
 
 
 export default function ContactoPage() {

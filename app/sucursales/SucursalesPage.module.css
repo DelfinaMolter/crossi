@@ -1,0 +1,35 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 300px;
+}
+
+.container {
+  margin-bottom: 20px;
+  width: 60%;
+  text-align: center;
+  display: flex;
+}
+
+.imageContainer {
+  margin-right: 10px;
+}
+
+.mapContainer {
+  flex: 1;
+}
+
+
+
+.mapIframe {
+  width: 50%;
+  height: 200px;
+}
+
+.imgSucursal {
+  width: 450px !important;
+  
+}

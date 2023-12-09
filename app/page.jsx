@@ -1,10 +1,11 @@
+import bannerSucursales from '@/public/banner-desktop-sucursales.png';
+import Image from 'next/image';
 
 
 export default function HomePage() {
   return (
     <main >
-      <h1>Soy la home</h1>
-      
+      <Image src={bannerSucursales} alt="Banner" width={1440} priority={true} />
     </main>
   )
 }
