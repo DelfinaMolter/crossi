@@ -1,7 +1,7 @@
 import Button from '@mui/material/Button';
 
-export default function ButtonComponent({ color, text }) {
+export default function ButtonComponent({ type, color, children, disabled }) {
     return (
-        <Button variant="contained" className={color}>{text}</Button>
+        <Button type={type} variant="contained" className={color} disabled={disabled}>{children}</Button>
     )
-  }
+}
