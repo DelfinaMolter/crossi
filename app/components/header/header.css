@@ -1,0 +1,15 @@
+nav.desktopHeader {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  padding: 20px 0px;
+}
+
+.menuDrawer{
+  background-image: url('../../../public/fondo-02.png');
+  height: 100%;
+}
+
+.LogoHeaderDrawer{
+  filter: invert(100%);
+  margin:20px 10px;
+}
+

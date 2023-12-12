@@ -5,7 +5,42 @@ import Image from 'next/image';
 export default function HomePage() {
   return (
     <main >
-      <Image src={bannerSucursales} alt="Banner" width={1440} priority={true} />
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      <h1>Soy la home</h1>
+      
     </main>
   )
 }
