@@ -6,7 +6,7 @@ import { FormControl, FormGroup, Typography } from "@mui/material";
 import { useFormContext } from "react-hook-form";
 
 export default function FormContact() {
-
+  const reasons = [ 'Eventos', 'Trabajar con Nosotros', 'Otros']
   const {
     handleSubmit,
     control,
@@ -52,16 +52,48 @@ export default function FormContact() {
         <FormControl component="fieldset">
           <FormGroup aria-label="position" sx={{ mt: 3 }} className="loginBox">
             <CustomTextField
+              name="name"
+              label="Nombre"
+              type="text"
+              control={control}
+              defaultValue=""
+              aria_describedby="outlined-day-helper-text"
+            />
+            <Typography variant="caption" color="red">
+              <ErrorMessage errors={errors} name="name" />
+            </Typography>
+            <CustomTextField
+              name="lastName"
+              label="Apellido"
+              type="text"
+              control={control}
+              defaultValue=""
+              aria_describedby="outlined-day-helper-text"
+            />
+            <Typography variant="caption" color="red">
+              <ErrorMessage errors={errors} name="lastName" />
+            </Typography>
+            <CustomTextField
               name="email"
               label="Email"
               type="email"
               control={control}
               defaultValue=""
-              variant="standard"
               aria_describedby="outlined-day-helper-text"
             />
             <Typography variant="caption" color="red">
               <ErrorMessage errors={errors} name="email" />
+            </Typography>
+            <CustomTextField
+              name="phone"
+              label="Telefono"
+              type="text"
+              control={control}
+              defaultValue=""
+              aria_describedby="outlined-day-helper-text"
+            />
+            <Typography variant="caption" color="red">
+              <ErrorMessage errors={errors} name="phone" />
             </Typography>
 
             {isSubmitting ? (
