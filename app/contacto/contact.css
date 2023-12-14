@@ -2,3 +2,108 @@
   width:100%;
   height: auto;
 }
+
+.contactBox{
+  position: relative;
+}
+.contactDiv{
+  width: 100%;
+  background-color: var(--third-color);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border-radius:12px;
+  padding:40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.sobreImg{
+  position: absolute;
+  z-index: 3;
+  left: -30px;
+  top: -30px;
+  width: 110px;
+  height: auto;
+}
+.mdqImg{
+  position: absolute;
+  z-index: 3;
+  right: 0px;
+  bottom: 0px;
+  width: 100px;
+  height: auto;
+}
+.avionImg{
+  position: absolute;
+  z-index: 1;
+  left: -95px;
+  bottom: -50px;
+  width: 210px;
+  height: auto;
+}
+
+label, legend, li, button{
+  font-family: var(--font-courier)!important;
+}
+
+.recaptcha{
+  margin: 20px auto;
+}
+.nameBox{
+  display: flex;
+  gap:20px;
+}
+.midWidth{
+  display: flex;
+  flex-direction: column;
+  min-width: 190px;
+  width: 50%;
+}
+.width70{
+  width: 220px;
+}
+
+button.btnEnvio{
+  width: 150px;
+}
+
+@media only screen and (max-width: 441px) {
+  .contactBox{
+    padding:30px 20px;
+  }
+  .nameBox{
+    flex-direction: column;
+    width: 100%;
+    gap:0px;
+  }
+  .midWidth{
+    display: flex;
+    flex-direction: column;
+    min-width: inherit;
+    width: 100%;
+  }
+  .width70{
+    width: 100%;
+  }
+  
+  button.btnEnvio{
+    width: 100%;
+  }
+  .sobreImg{
+    left: 50%;
+    top: 20px;
+    transform: translate(-50%, -50%);
+    width: 100px;
+
+  }
+  .mdqImg{
+    display: none;
+  }
+  .avionImg{
+  
+    left: 0px;
+    bottom: -25px;
+  }
+}

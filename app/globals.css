@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Courier+Prime:wght@400;700&display=swap');
+
 :root {
   --primary-button:#A6643D;
   --secondary-button:#6C7246;
@@ -10,6 +12,8 @@
   --third-color:#D4A373;
 
   --footer:#7F3C1B;
+  --font-anton:'Anton', sans-serif;
+  --font-courier: 'Courier Prime', monospace;
 
 }
 
@@ -29,6 +33,7 @@ body {
 body {
   background-image: url('/fondo-02.png');
   min-height: 100vh;
+  font-family: var(--font-courier);
 }
 
 

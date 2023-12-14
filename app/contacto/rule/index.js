@@ -4,9 +4,7 @@ import * as yup from "yup";
 export const contactSchema = yup.object({
   reason: yup
     .string()
-    .required("Este campo es obligatorio")
-    .min(2, "Mínimo 2 caracteres")
-    .max(15, "Máximo 15 caracteres"),
+    .required("Este campo es obligatorio"),
   name: yup
     .string()
     .required("Este campo es obligatorio")

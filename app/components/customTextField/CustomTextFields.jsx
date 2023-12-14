@@ -8,13 +8,15 @@ export const CustomTextField = ({
   type,
   required,
   control,
-  variant = "outlined",
+  variant = "filled",
+  color = "primary",
   defaultValue,
   textFieldProps,
   aria_describedby,
   onChange,
   onFocus,
   onBlur,
+  className
 }) => {
   return (
     <Controller
@@ -28,9 +30,11 @@ export const CustomTextField = ({
           label={label}
           variant={variant}
           fullWidth
+          color={color}
           required={required}
           aria-describedby={aria_describedby}
-          sx={{ mt: 2, backgroundColor: "transparent" }}
+          sx={{ mt: 2 }}
+          className={className}
           {...textFieldProps}
           onBlur={(e) => {
             field.onBlur(e);
