@@ -30,11 +30,11 @@ const navItems = [
     name:'Sucursales',
     route:'/sucursales' 
   },
-  {
-    name: 'Franquicias',
-    route: '/franquicias'
+  // {
+  //   name: 'Franquicias',
+  //   route: '/franquicias'
     
-  }, 
+  // }, 
   {
     name:'Contacto',
     route:'/contacto'

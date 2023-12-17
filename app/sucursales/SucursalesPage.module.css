@@ -3,12 +3,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  margin-top: 300px;
 }
 
 .container {
   margin-bottom: 20px;
+  margin-top: 100px;
   width: 60%;
   text-align: center;
   display: flex;
@@ -19,17 +18,30 @@
 }
 
 .mapContainer {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  
 }
 
 
 
 .mapIframe {
-  width: 50%;
+  width: 450px;
   height: 200px;
 }
 
-.imgSucursal {
+/* .imgSucursal {
   width: 450px !important;
   
+} */
+
+.info {
+  margin-bottom: 25px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #512200;
 }

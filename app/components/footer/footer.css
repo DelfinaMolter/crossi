@@ -1,0 +1,35 @@
+footer {
+  height: 85px;
+  background-color: #7F3C1B;
+  width: 100%;
+  
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #7F3C1B; 
+  color: white; 
+  padding: 20px; 
+  align-items: center;
+}
+
+.footer-section {
+  width: 33%;
+  text-align: center;
+}
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-section img {
+  width: 30px; 
+  margin: 5px; 
+}
+
+.brand-logo img{
+  width: 229px;
+  height: 54px;
+}
