@@ -110,7 +110,7 @@ export default function FormContact() {
             <Typography variant="caption" color="red">
               <ErrorMessage errors={errors} name="reason" />
             </Typography>
-            <Box fullWidth  className="nameBox"> 
+            <Box className="nameBox"> 
               <Box className={"midWidth"}>
                 <CustomTextField
                   name="name"
