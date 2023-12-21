@@ -29,7 +29,7 @@ export default function Footer() {
         
         <div className="footer-section social-media">
           <p>seguinos</p>
-          <Link href={"https://www.instagram.com/croissantmdp/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="}>
+          <Link href={"https://www.instagram.com/croissantmdp/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA=="}  rel="noopener noreferrer" target="_blank">
             <Image 
               src={Insta}
               width={150}
@@ -38,7 +38,7 @@ export default function Footer() {
               className='social'
               priority />
           </Link>
-          <Link href={"https://www.facebook.com/croissantcafemdp"}>
+          <Link href={"https://www.facebook.com/croissantcafemdp"} rel="noopener noreferrer" target="_blank">
             <Image 
               src={Face}
               width={150}
@@ -47,7 +47,7 @@ export default function Footer() {
               className='social'
               priority />
           </Link>
-          <Link href={"https://www.tiktok.com/@croissantmdp?is_from_webapp=1&sender_device=pc"}>
+          <Link href={"https://www.tiktok.com/@croissantmdp?is_from_webapp=1&sender_device=pc"} rel="noopener noreferrer" target="_blank">
             <Image 
               src={TikTok}
               width={150}

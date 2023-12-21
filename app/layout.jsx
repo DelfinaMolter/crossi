@@ -1,7 +1,7 @@
-import { Courier_Prime, Anton } from 'next/font/google'
-import './globals.css'
-import Header from '@/app/components/header/header'
-import Footer from '@/app/components/footer/footer'
+import { Courier_Prime, Anton } from 'next/font/google';
+import './globals.css';
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
 
 const courier = Courier_Prime({ 
   subsets: ['latin'],
