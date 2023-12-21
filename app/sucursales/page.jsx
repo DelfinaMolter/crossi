@@ -1,8 +1,15 @@
 // SucursalesPage.js
 
-import React from 'react';
 import Image from 'next/image';
 import styles from './SucursalesPage.module.css';
+import WhatsApp from '../components/whatsapp/whatsapp';
+
+// TODO:
+
+// - terminar coneccion whatsapp
+// - centrar el main
+// - que la imagen de la sucursal sea de alto como el texto y el mapa juntos.
+// - responsivo
 
 const SucursalesPage = () => {
   const sucursales = [
@@ -48,7 +55,7 @@ const SucursalesPage = () => {
               <p><strong>{`${item.zone}`}</strong></p>
               <p>{`${item.address}`}</p>
               <p>{`${item.time}`}</p>
-              <p>{`${item.contact}`}</p>
+              <WhatsApp number={item.contact}/>
             </div>
             <iframe
               className={styles.mapIframe}
