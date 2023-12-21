@@ -33,7 +33,6 @@ const navItems = [
   // {
   //   name: 'Franquicias',
   //   route: '/franquicias'
-    
   // }, 
   {
     name:'Contacto',

@@ -24,12 +24,13 @@ footer {
   align-items: center;
 }
 
-.footer-section img {
+.footer-section img.social {
   width: 30px; 
+  height: auto;
   margin: 5px; 
 }
 
-.brand-logo img{
-  width: 229px;
-  height: 54px;
+.brand-logo{
+  width: 200px;
+  height: auto;
 }
