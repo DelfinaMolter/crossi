@@ -1,6 +1,6 @@
 "use client"
-import ButtonComponent from "@/app/components/button/button";
-import { CustomTextField } from "@/app/components/customTextField/CustomTextFields";
+import ButtonComponent from "../../components/button/button";
+import { CustomTextField } from "../../components/customTextField/CustomTextFields";
 import { ErrorMessage } from "@hookform/error-message";
 import { Box, FormControl, FormGroup, InputLabel, MenuItem, Select, Typography } from "@mui/material";
 import React from "react";
