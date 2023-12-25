@@ -1,10 +1,6 @@
-import emailjs from "@emailjs/browser";
 
-export const sendEmail=(data)=>{
-    emailjs.sendForm('service_7kfl6zg', 'template_nyzk4ec', data,'hT2gwvfUJdgSCqtkn') // cambiar info
-    .then((result) => {
-        console.log(result.text);
-    }, (error) => {
-        console.log(error.text);
-    });
+export const sendEmail= async(data)=>{
+    const res = await fetch('/api/send', { method: 'POST', body: JSON.stringify(data)})
+    const info = await res.json()
+    console.log(info)
 }

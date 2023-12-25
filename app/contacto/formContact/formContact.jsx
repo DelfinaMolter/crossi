@@ -8,7 +8,7 @@ import ReCAPTCHA from "react-google-recaptcha";
 import { Controller, useFormContext } from "react-hook-form";
 import { theme } from "../../styles/materialThemeFormContact";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
-// import { sendEmail } from "@/app/utils/sendEmail";
+import { sendEmail } from "../../utils/sendEmail";
 
 export default function FormContact() {
   const reasons = [ 'Eventos', 'Trabajar con Nosotros', 'Otros']
@@ -31,7 +31,6 @@ export default function FormContact() {
     }
   }
   function onChangeReason(event) {
-    console.log(event.target.value)
     setReason(event.target.value);
   }
   React.useEffect(()=>{
@@ -42,8 +41,8 @@ export default function FormContact() {
     }
 	}, [recaptchaError])
   const onSubmit = async (data) => {
-    // sendEmail(data)
-    console.log(data)
+    sendEmail(data)
+    // console.log(data)
     // if (response.status == 200) {
     //   console.log(response)
     // } else if (response.status == 401) {
@@ -164,7 +163,7 @@ export default function FormContact() {
 
             <ReCAPTCHA
                 ref={captcha}
-                sitekey="6Le9FEMnAAAAAIf6XrzjM1_ZEdy9EY-O_5Hh969f"
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_TOKEN}
                 onChange={onChange}
                 className="recaptcha"
             />

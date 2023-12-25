@@ -1,5 +1,3 @@
-import bannerSucursales from '@/public/banner-desktop-sucursales.png';
-import Image from 'next/image';
 
 
 export default function HomePage() {
