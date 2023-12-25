@@ -1,0 +1,35 @@
+.title {
+  background-color: #7F3C1B;
+  max-width: 1150px;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.title h1 {
+  color: white;
+  font-size: 1.1rem;
+  padding: 20px;
+  margin: 0;
+}
+
+.social-media-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10px;
+  }
+}
+
+.social-description {
+  text-align: center;
+  color: #A6643D;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}

@@ -1,15 +1,15 @@
 // SucursalesPage.js
 
 import Image from 'next/image';
-import styles from './SucursalesPage.module.css';
+import './SucursalesPage.css';
 import WhatsApp from '../components/whatsapp/whatsapp';
 import { Container } from '@mui/material';
 
 // TODO:
 
-// - centrar el main
-// - que la imagen de la sucursal sea de alto como el texto y el mapa juntos.
-// - responsivo
+// - centrar el main Check!
+// - que la imagen de la sucursal sea de alto como el texto y el mapa juntos. Check!
+// - responsivo Check!
 
 const SucursalesPage = () => {
   const sucursales = [
@@ -40,26 +40,25 @@ const SucursalesPage = () => {
   ];
 
   return (
-    <main className={styles.main}>
-        <div className={styles.banner}>
-          {/* Agrega tu imagen de introducción aquí */}
-          <Image src="/sucursales-banner.png" alt="Banner Sucursales" width={1900} height={607} />
+    <main className="main">
+        <div className="banner">
+          <Image src="/sucursales-banner.png" alt="Banner Sucursales" width={2560} height={507} style={{ maxWidth: '100%', height: 'auto' }}/>
         </div>
-      <Container>
+      <Container className='sucursales-container'>
         {sucursales.map((item) => (
-          <div key={item.name} className={styles.container}>
-            <div className={styles.imageContainer}>
-              <Image src={`/${item.name}.png`} alt={item.name} width={509} height={336} />
+          <div key={item.name} className="container"> 
+            <div className="imageContainer">
+              <Image src={`/${item.name}.png`} alt={item.name} width={409} height={246} style={{ maxWidth: '100%', height: 'auto' }} />
             </div>
-            <div className={styles.mapContainer}>
-              <div className={styles.info}> 
+            <div className="mapContainer">
+              <div className="info"> 
                 <p><strong>{`${item.zone}`}</strong></p>
                 <p>{`${item.address}`}</p>
                 <p>{`${item.time}`}</p>
                 <WhatsApp number={item.contact}/>
               </div>
               <iframe
-                className={styles.mapIframe}
+                className="mapIframe"
                 src={item.maps}
                 style={{ border: 0 }}
                 allowFullScreen={{}}
