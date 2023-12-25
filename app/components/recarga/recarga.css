@@ -1,0 +1,29 @@
+.recarga {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.recarga-text {
+  color: #6C7246;
+  text-align: center;
+}
+
+.description {
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.boton {
+  background-color: #6C7246;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  width: 170px;
+  margin-left: auto;
+  margin-right: auto;
+}

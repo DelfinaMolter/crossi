@@ -22,9 +22,9 @@ export default function ContactoPage() {
     <main >
       <Image
         src={Banner}
-        width={180}
-        height={40}
-        alt="Banner de Cafe"
+        width={2560}
+        height={507}
+        style={{ maxWidth: '100%', height: 'auto' }}
         className="bannerContact"
       />
       <Container sx={{ display: 'flex', justifyContent: 'center' }}>
