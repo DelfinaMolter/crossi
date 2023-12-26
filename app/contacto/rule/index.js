@@ -23,4 +23,21 @@ export const contactSchema = yup.object({
     .string()
     .required("Este campo es obligatorio")
     .matches(/^[0-9]{10,}$/, "El número debe incluir el código de area, pero no el prefijo."),
+  file: yup
+    .string()
+    .notRequired(),
+  recaptcha: yup
+    .string()
+    // .required("Por favor acepta el captcha."),
+    .test('recaptcha', 'Por favor acepta el reCAPTCHA', async function(value) {
+      // Si value tiene un token, consideramos el reCAPTCHA como válido
+      if (value && value !== '') {
+        return true;
+      }
+      return false;
+    })
+    .required('Por favor acepta el reCAPTCHA'), // Definimos que el campo es requerido
   })
+
+
+  

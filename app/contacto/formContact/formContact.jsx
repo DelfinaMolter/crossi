@@ -2,7 +2,7 @@
 import ButtonComponent from "../../components/button/button";
 import { CustomTextField } from "../../components/customTextField/CustomTextFields";
 import { ErrorMessage } from "@hookform/error-message";
-import { Box, FormControl, FormGroup, InputLabel, MenuItem, Select, Typography } from "@mui/material";
+import { Box, FormControl, FormGroup, Input, InputLabel, MenuItem, Select, Typography } from "@mui/material";
 import React from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { Controller, useFormContext } from "react-hook-form";
@@ -13,36 +13,45 @@ import { sendEmail } from "../../utils/sendEmail";
 export default function FormContact() {
   const reasons = [ 'Eventos', 'Trabajar con Nosotros', 'Otros']
 
-  const [recaptchaError, setRecaptchaError] = React.useState(null)
-  const [btnActive, setBtnActive] = React.useState(false)
+  const [recaptchaValue, setRecaptchaValue] = React.useState('');
   const [reason, setReason] = React.useState("")
-  const captcha = React.useRef(null);
+  const captchaRef = React.useRef(null);
 
   const {
     handleSubmit,
     control,
     formState: { errors, isSubmitting },
     trigger,
+
   } = useFormContext();
 
-  function onChange() {
-    if(captcha.current.getValue()){
-        setRecaptchaError(false)
-    }
-  }
+
   function onChangeReason(event) {
     setReason(event.target.value);
   }
-  React.useEffect(()=>{
-    if(captcha.current.getValue()){
-      setBtnActive(true)
-    }else{
-      setBtnActive(false)
-    }
-	}, [recaptchaError])
+
+
   const onSubmit = async (data) => {
-    sendEmail(data)
-    // console.log(data)
+    try {
+      await trigger("recaptcha"); // Activa la validación de recaptcha
+  
+      const isValid = recaptchaValue !== ''; // Comprueba si el reCAPTCHA está completado
+  
+      if (!isValid) {
+        alert('Por favor completa el reCAPTCHA');
+        return;
+      }
+
+      const response = await sendEmail(data);
+      console.log(response)
+      // Resto de la lógica para enviar el formulario si el reCAPTCHA está completado
+      // ...
+    } catch (error) {
+      console.error(error);
+    }
+    
+    // captchaRef.current.reset();
+
     // if (response.status == 200) {
     //   console.log(response)
     // } else if (response.status == 401) {
@@ -161,17 +170,40 @@ export default function FormContact() {
               <ErrorMessage errors={errors} name="phone" />
             </Typography>
 
-            <ReCAPTCHA
-                ref={captcha}
-                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_TOKEN}
-                onChange={onChange}
-                className="recaptcha"
-            />
             {
-              recaptchaError &&
-              <small className="error-msg ">Por favor acepta el captcha.</small>
-
+              reason === "Trabajar con Nosotros" &&
+              <CustomTextField
+                name="file"
+                label="Adjunta Link de tu CV"
+                type="text"
+                control={control}
+                defaultValue=""
+                aria_describedby="outlined-day-helper-text"
+              />
             }
+            <Controller
+              name="recaptcha"
+              control={control}
+              defaultValue=""
+              render={({ field }) => (
+                <ReCAPTCHA
+                  ref={captchaRef}
+                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_TOKEN}
+                  className="recaptcha"
+                  onChange={(value) => {
+                    field.onChange(value);
+                    setRecaptchaValue(value);
+                  }}
+                  onExpired={() => {
+                    field.onChange(''); 
+                    setRecaptchaValue('');
+                  }}
+                />
+              )}
+            />
+            <Typography variant="caption" color="red">
+              <ErrorMessage errors={errors} name="recaptcha" />
+            </Typography>
 
             {isSubmitting ? (
             <ButtonComponent
@@ -183,7 +215,6 @@ export default function FormContact() {
           ) : (
             <ButtonComponent
               type="submit"
-              disabled={btnActive?false:true}
               className="btnEnvio"
             >
               Enviar
