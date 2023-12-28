@@ -24,6 +24,7 @@ export default function ContactoPage() {
         src={Banner}
         width={2560}
         height={507}
+        alt="banner"
         style={{ maxWidth: '100%', height: 'auto' }}
         className="bannerContact"
       />

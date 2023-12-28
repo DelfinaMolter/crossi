@@ -19,7 +19,7 @@ main {
 
 
 .container {
-    background-image: url(/_next/static/media/fondo-comp-welcome.ab195ed0.png);
+    background-image: url(../../../public/fondo-comp-welcome.png);
     background-repeat: no-repeat;
     background-position: 50%;
     max-width: 834px;

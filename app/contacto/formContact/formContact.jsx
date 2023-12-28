@@ -9,6 +9,7 @@ import { Controller, useFormContext } from "react-hook-form";
 import { theme } from "../../styles/materialThemeFormContact";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import { sendEmail } from "../../utils/sendEmail";
+import Swal from "sweetalert2";
 
 export default function FormContact() {
   const reasons = [ 'Eventos', 'Trabajar con Nosotros', 'Otros']
@@ -22,7 +23,7 @@ export default function FormContact() {
     control,
     formState: { errors, isSubmitting },
     trigger,
-
+    reset
   } = useFormContext();
 
 
@@ -38,49 +39,41 @@ export default function FormContact() {
       const isValid = recaptchaValue !== ''; // Comprueba si el reCAPTCHA está completado
   
       if (!isValid) {
-        alert('Por favor completa el reCAPTCHA');
+        Swal.fire({
+          title: "Por favor completa el reCAPTCHA.",
+          icon: "warning",
+          confirmButtonText: "OK",
+          confirmButtonColor: "#512200",
+          focusConfirm: false,
+        });
         return;
       }
 
       const response = await sendEmail(data);
-      console.log(response)
-      // Resto de la lógica para enviar el formulario si el reCAPTCHA está completado
-      // ...
+      if(response.data.id){
+        captchaRef.current.reset();
+        setReason("")
+        reset({});
+        Swal.fire({
+          title: "Ya se envio tu solicitud!",
+          text: "Te estaremos contactando pronto",
+          icon: "success",
+          confirmButtonText: "OK",
+          confirmButtonColor: "#512200",
+          focusConfirm: false,
+        });
+      }
     } catch (error) {
       console.error(error);
+      Swal.fire({
+        title: "Error!",
+        text: "No se pudo enviar tu solicitud",
+        icon: "error",
+        confirmButtonText: "OK",
+        confirmButtonColor: "#512200",
+        focusConfirm: false,
+      });
     }
-    
-    // captchaRef.current.reset();
-
-    // if (response.status == 200) {
-    //   console.log(response)
-    // } else if (response.status == 401) {
-    //   Swal.fire({
-    //     title: "Error!",
-    //     text: response.data,
-    //     imageUrl: "../../images/icons/no-beer.jpg",
-    //     imageWidth: 150,
-    //     imageHeight: 150,
-    //     imageAlt: "No puede ingresar",
-    //     confirmButtonText: "OK",
-    //     confirmButtonColor: "#ceb5a7",
-    //     focusConfirm: false,
-    //   });
-    //   console.error(response.data);
-    // } else if (response.status == 500) {
-    //   Swal.fire({
-    //     title: "Ups!",
-    //     text: response.data,
-    //     imageUrl: "../../images/icons/no-beer.jpg",
-    //     imageWidth: 150,
-    //     imageHeight: 150,
-    //     imageAlt: "No puede ingresar",
-    //     confirmButtonText: "OK",
-    //     confirmButtonColor: "#ceb5a7",
-    //     focusConfirm: false,
-    //   });
-    //   console.error(response.data);
-    // }
   };
 
   return (
@@ -201,7 +194,7 @@ export default function FormContact() {
                 />
               )}
             />
-            <Typography variant="caption" color="red">
+            <Typography variant="caption" color="red" className="recaptchaError">
               <ErrorMessage errors={errors} name="recaptcha" />
             </Typography>
 
