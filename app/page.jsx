@@ -1,11 +1,14 @@
 import Image from 'next/image';
-import WelcomeComponent from './components/welcome/welcome'
-import SocialMediaTitle from './components/social/social-home'
+import WelcomeComponent from './components/welcome/welcome';
+import SocialMediaTitle from './components/social/social-home';
 import './components/welcome/welcome.css';
 import './page.css';
-import Info from './components/info/info'
-import MasonryImageList from './components/img-board/board'
-import Recarga from './components/recarga/recarga'
+import Info from './components/info/info';
+import MasonryImageList from './components/img-board/board';
+import Recarga from './components/recarga/recarga';
+import CakesPage from './components/carousel/cakes';
+import Eventos from './components/eventos/eventos';
+import MenuPage from './components/carousel/menu';
 
 export default function HomePage() {
   return (
@@ -19,6 +22,9 @@ export default function HomePage() {
       <SocialMediaTitle />
       <MasonryImageList />
       <Recarga />
+      <CakesPage />
+      <Eventos />
+      <MenuPage />
     </main>
   )
 }

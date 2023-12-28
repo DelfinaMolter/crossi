@@ -8,7 +8,7 @@ export default function Info () {
     <main>
       <Container className='container' id='info'> 
         <p>En crossi no solo regalamos calidad y mucho amor en nuestros productos,</p>
-        <h1>llevamos todo lo que hacemos a otro nivel para que tu experiencia se convierta en un viaje de ida</h1>
+        <h1 className='experiencia'>llevamos todo lo que hacemos a otro nivel para que tu experiencia se convierta en un viaje de ida</h1>
       </Container>
       <div className="attributes">
         <div className="attribute-1">

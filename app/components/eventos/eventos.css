@@ -1,0 +1,66 @@
+.events-component {
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  gap: 50px;
+  justify-content: center;
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.events-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  align-items: center;
+  justify-content: center;
+  height: 430px;
+  width: 300px;
+  border-radius: 15px;
+  position: relative;
+}
+.events-info {
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.events-title {
+  font-family: var(--font-anton);
+  color: white;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.cumple {
+  background: #D4A373;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 100px;
+  }
+}
+
+.eventos {
+  background: #A6643D;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 100px;
+  }
+}
+
+.regala {
+  background: #7F3C1B;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 100px;
+  }
+}
+
+.events-img {
+  position: absolute;
+  top: -100px;
+}
+
+.events-text {
+  position: absolute;
+  top: 200px;
+}
+

@@ -7,10 +7,19 @@ import './board.css';
 export default function MasonryImageList() {
   return (
     <Box className="img-list" sx={{ maxWidth: 1150, width: '100%', height: 'auto', overflow: 'hidden' }}>
-      <ImageList variant="masonry" cols={3} gap={8}>
+      <ImageList variant="masonry" sx={{
+        columnCount: {
+          xs: '1 !important',
+          sm: '2 !important',
+          md: '3 !important',
+          lg: '3 !important',
+          xl: '3 !important',
+        },
+      }}>
         {itemData.map((item) => (
           <ImageListItem key={item.img}>
             <img
+              style={{ width: '100%', height: 'auto' }}
               srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
               src={`${item.img}?w=248&fit=crop&auto=format`}
               alt={item.title}
@@ -47,11 +56,5 @@ const itemData = [
   {
     img: '/6-board.png',
     title: 'Crossi Consti',
-  }
+  },
 ];
-
-// xs, extra-small: 0px carousel sin margin
-// sm, small: 600px 
-// md, medium: 900px
-// lg, large: 1200px
-// xl, extra-large: 1536px

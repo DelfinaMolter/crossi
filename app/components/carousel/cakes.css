@@ -1,0 +1,91 @@
+@import '../../globals.css';
+
+.cakes-component {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.cakes-container {
+  display: flex !important;
+  flex-direction: row;
+  gap: 50px;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: 426px) {
+    flex-direction: column;
+    height: 790px;
+  }
+}
+
+.cakes-info {
+  text-align: left;
+  color: white;
+  padding: 20px;
+}
+.cakes-info h2 {
+  text-align: left !important;
+  font-size: 1.8rem;
+  font-family: var(--font-anton);
+  margin-bottom: 20px;
+  letter-spacing: 4px;
+}
+
+.cake-logo {
+  margin-top: auto;
+  margin-left: auto;
+}
+
+.imageContainer {
+  box-shadow: 15px 14px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 375px) {
+  .imageContainer {
+    width: 270px;
+  }
+  .imageContainer img {
+    width: 260px;
+  }
+}
+
+.bruce {
+  background-color: #D4A373;
+  color: #A6643D !important;
+}
+
+.red-velvet {
+  background-color: #B0B78C;
+  color: #6C7246 !important;
+}
+
+.cheesecake-frutos-rojos {
+  background-color: #A6643D;
+  color: #FFFFFF !important;
+}
+
+.cheesecake-oreo {
+  background-color: #B0B78C;
+  color: #6C7246 !important;
+}
+
+.triple-c {
+  background-color: #D4A373;
+  color: #A6643D !important;
+}
+
+.main {
+  min-height: 50vh !important;
+}
+
+.menues-component {
+  max-width: 1440px;
+}
+
+.menu-img {
+  width: 100%;
+}

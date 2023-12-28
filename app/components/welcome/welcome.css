@@ -19,7 +19,7 @@ main {
 
 
 .container {
-    background-image: url(/_next/static/media/fondo-comp-welcome.ab195ed0.png);
+    background-image: url(../../../public/fondo-comp-welcome.png);
     background-repeat: no-repeat;
     background-position: 50%;
     max-width: 834px;
@@ -34,11 +34,13 @@ main {
     color: #6C7246;
 }
 
-h1 {
+.welcome-title {
   text-align: center;
   display: flex;
   justify-content: center;
   margin-bottom: 15px;
+  font-family: var(--font-anton);
+  letter-spacing: 1px;
   @media screen and (min-width: 767px) {
     font-size: 2rem;
   }

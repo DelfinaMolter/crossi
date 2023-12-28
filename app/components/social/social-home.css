@@ -9,12 +9,19 @@
     align-items: center;
   }
 }
-
-.title h1 {
+@media screen and (max-width: 1024px) {
+  .title {
+    border-radius: 0;
+  }    
+}
+.title-h1 {
   color: white;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   padding: 20px;
   margin: 0;
+  font-family: var(--font-anton);
+  font-weight: 400;
+  letter-spacing: 3px;
 }
 
 .social-media-container {
@@ -24,6 +31,11 @@
   @media screen and (max-width: 767px) {
     margin-bottom: 10px;
   }
+}
+@media screen and (max-width: 425px) {
+  .social-media-container {
+    display: none;
+  }    
 }
 
 .social-description {
