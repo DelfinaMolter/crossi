@@ -7,7 +7,7 @@ export default function SocialMediaTitle () {
   return (
     <main className=''>
       <Container className='title'> 
-        <h1>SUMATE A LA COMUNIDAD CROSSI!</h1>
+        <h1 className='title-h1'>SUMATE A LA COMUNIDAD CROSSI!</h1>
         <div className="social-media-container">
           <Image src="/ig.png" alt="Corazon" width={42} height={32} />
           <Image src="/fb.png" alt="Corazon" width={42} height={32} />
@@ -22,4 +22,4 @@ export default function SocialMediaTitle () {
 
 
 )
-} 
+}  

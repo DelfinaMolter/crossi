@@ -34,11 +34,13 @@ main {
     color: #6C7246;
 }
 
-h1 {
+.welcome-title {
   text-align: center;
   display: flex;
   justify-content: center;
   margin-bottom: 15px;
+  font-family: var(--font-anton);
+  letter-spacing: 1px;
   @media screen and (min-width: 767px) {
     font-size: 2rem;
   }
