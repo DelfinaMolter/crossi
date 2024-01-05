@@ -84,8 +84,10 @@
 
 .menues-component {
   max-width: 1440px;
+  margin-bottom: 30px;
 }
 
 .menu-img {
   width: 100%;
 }
+
