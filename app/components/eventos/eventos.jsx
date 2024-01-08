@@ -29,7 +29,7 @@ const Eventos = () => {
             {listaEventos.map((item) => (
               <div key={item.name} className={`events-container ${item.name}`}> 
                 <div className="events-img">
-                  <Image className="imagen"src={`/${item.name}.png`} alt={item.name} width={252} height={252}  />
+                  <Image className="imagen"src={`/${item.name}.png`} alt={item.name} width={200} height={200}  />
                 </div>
                 <div className="detail-container events-text">
                   <div className="events-info"> 
