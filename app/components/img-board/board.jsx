@@ -4,6 +4,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import './board.css';
 
+
 export default function MasonryImageList() {
   return (
     <Box className="img-list" sx={{ maxWidth: 1150, width: '100%', height: 'auto', overflow: 'hidden' }}>

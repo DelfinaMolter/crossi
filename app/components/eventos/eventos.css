@@ -15,7 +15,7 @@
   max-width: 400px;
   align-items: center;
   justify-content: center;
-  height: 430px;
+  height: 350px;
   width: 300px;
   border-radius: 15px;
   position: relative;
@@ -24,6 +24,7 @@
   text-align: center;
   color: white;
   padding: 20px;
+  margin-top: -75px;
 }
 
 .events-title {

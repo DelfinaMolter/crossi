@@ -48,7 +48,7 @@ const MenuPage = () => {
   ];
 
   return (
-    <main className="main">
+    <main className="main-menu">
       <Container className="menues-component">
         <div style={sliderContainerStyle}>
           <Slider {...sliderSettings}>

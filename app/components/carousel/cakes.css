@@ -9,16 +9,18 @@
 .cakes-container {
   display: flex !important;
   flex-direction: row;
-  gap: 50px;
+  /* gap: 50px; */
   align-items: center;
   padding: 15px;
   border-radius: 10px;
   max-width: 1050px;
   margin-left: auto;
   margin-right: auto;
+  height: 340px;
   @media screen and (max-width: 426px) {
     flex-direction: column;
-    height: 790px;
+    height: 650px;
+    gap: 0;
   }
 }
 
@@ -79,8 +81,12 @@
 }
 
 .main {
-  min-height: 50vh !important;
+  min-height: 35vh !important;
 }
+
+/* .main-menu {
+  max-height: 550px;
+} */
 
 .menues-component {
   max-width: 1440px;
@@ -90,4 +96,3 @@
 .menu-img {
   width: 100%;
 }
-
